@@ -22,7 +22,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/',function(req,res){
-    res.send('hello');
+    res.send({express : "hello"});
 });
 
 
@@ -34,7 +34,6 @@ router.get('/buzzwords', function(req,res){
         if(!err){
             //print
             res.send(docs);
-            process.exit();
         } else{ throw err; }
     }
 )});
@@ -46,7 +45,6 @@ router.get('/apptypes', function(req,res){
         if(!err){
             //print
             res.send(docs);
-            process.exit();
         } else{ throw err; }
     }
 )});
@@ -58,7 +56,6 @@ router.get('/descriptions', function(req,res){
         if(!err){
             //print
             res.send(docs);
-            process.exit();
         } else{ throw err; }
     }
 )});
@@ -70,7 +67,6 @@ router.get('/subjects', function(req,res){
         if(!err){
             //print
             res.send(docs);
-            process.exit();
         } else{ throw err; }
     }
 )});
