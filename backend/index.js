@@ -22,7 +22,7 @@ app.listen(PORT, () => {
 });
 
 app.get('/',function(req,res){
-    res.send('hello');
+    res.send({express : "hello"});
 });
 
 
