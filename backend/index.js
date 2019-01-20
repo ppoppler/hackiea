@@ -8,9 +8,8 @@ mongoose.connect('mongodb+srv://admin:code2019@hackiea-vicfh.gcp.mongodb.net/Hac
     err => {console.log('Can not connect to the database' + err)}
 );
 
+// Buzzword model loaded
 const buzz = mongoose.model('Buzzword', new mongoose.Schema({text:String}),'Buzzword');
-
-
 
 const app = express();
 
@@ -25,9 +24,13 @@ app.get('/',function(req,res){
 });
 
 
+// Creating a api function to get all the database entries from buzzwords
 router.get('/buzzwords', function(req,res){
+    // Using find() to retrieve all of the entries from buzz and print to console.
     return buzz.find({},function(err,docs){
+        //if there's no error
         if(!err){
+            //print
             console.log(docs);
             process.exit();
         } else{ throw err; }
