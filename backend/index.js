@@ -33,7 +33,7 @@ router.get('/buzzwords', function(req,res){
         //if there's no error
         if(!err){
             //print
-            console.log(docs);
+            res.send(docs);
             process.exit();
         } else{ throw err; }
     }
@@ -45,7 +45,7 @@ router.get('/apptypes', function(req,res){
         //if there's no error
         if(!err){
             //print
-            console.log(docs);
+            res.send(docs);
             process.exit();
         } else{ throw err; }
     }
@@ -57,7 +57,7 @@ router.get('/descriptions', function(req,res){
         //if there's no error
         if(!err){
             //print
-            console.log(docs);
+            res.send(docs);
             process.exit();
         } else{ throw err; }
     }
@@ -69,7 +69,7 @@ router.get('/subjects', function(req,res){
         //if there's no error
         if(!err){
             //print
-            console.log(docs);
+            res.send(docs);
             process.exit();
         } else{ throw err; }
     }
